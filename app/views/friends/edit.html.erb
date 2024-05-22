@@ -1,0 +1,22 @@
+<%= render 'header2' %>
+
+<center>
+<style>
+  body{
+    background-color: #333333;
+  }
+  .cont{
+    margin-top: 100px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+</style>
+<div class="cont">
+  <%= render "form", friend: @friend %>
+</div>
+<br>
+<div>
+  <%= link_to "Show this User", @friend, class:"btn btn-primary" %> |
+  <%= link_to "Back to Users", friends_path, class:"btn btn-light" %>
+</div>
+</center>

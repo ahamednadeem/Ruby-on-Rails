@@ -1,0 +1,30 @@
+<%= render 'friends/header2' %>
+<br>
+<style>
+      body{
+        background-color:#333333;
+      }
+      .center{
+        display: flex;
+        justify-content: center;
+
+      }
+      .jumbotron1{
+        width:  1100px;
+        background-color:#CCCCCC;
+      }
+</style>
+<br>
+<div class="center">
+<div class="jumbotron jumbotron1">
+  <h2 class="display-4"><%= 'Ahamed Nadeem' %></h2>
+  <hr class="border-bottom-dashed my-4">
+  <p>
+     <%= 'ahamed@mobicip.com'%> | <%= '9498498159' %>
+  </p> 
+  <br>
+  <p>
+    <%= @aboutme %>
+  </p>
+</div>
+</div>

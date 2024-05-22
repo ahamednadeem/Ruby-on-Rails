@@ -1,0 +1,26 @@
+<%= render 'header2' %>
+<br><br>
+
+<style>
+  body{
+    background-color:#333333;
+  }
+  .container5{
+    background-color:#CCCCCC;
+  }
+</style>
+
+<div class="jumbotron container container5">
+    <h2 class="display-4"><%= friend.name %></h2>
+    <hr class="border-bottom my-4">  
+    <p>
+      <%= friend.email %> | <%= friend.phone %>
+    </p>
+
+      <%= link_to "Edit", edit_friend_path(@friend), class:"btn btn-dark" %> 
+      <%= link_to "Back", friends_path, class:"btn btn-light" %>
+      <br><br>
+      <%= button_to "Delete this User", friend, method: :delete, class:"btn btn-danger" %>
+</div>
+
+

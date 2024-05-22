@@ -1,0 +1,46 @@
+<div style="background-color: #EDEDED; padding: 20px; width: 500px">
+  <%= form_with(model: friend) do |form| %>
+    
+    <% if !friend.id %>
+        <h3>Add New User</h3><br>
+    <% else %>
+        <h3>Editing <%=friend.name%> </h3><br>
+    <%end%>
+
+
+    <div class="field form-group">
+      <%= form.text_field :name, class: "form-control", placeholder:"User's Name" %>
+      <% if friend.errors[:name].any? %>
+      <div style="color: red;">
+          <p>Name <%= friend.errors[:name][0] %></p>
+      </div>
+    <% end %>
+    </div>
+
+    
+
+    <div class="field form-group">
+      <%= form.text_field :email, class:"form-control", placeholder:"Email" %>
+      <% if friend.errors[:email].any? %>
+      <div style="color: red;">
+        <p>Email <%= friend.errors[:email][0] %></p>
+      </div>
+    <% end %>
+    </div>
+
+    
+
+    <div class="field form-group">
+      <%= form.text_field :phone, class:"form-control", placeholder:"Phone Number" %>
+      <% if friend.errors[:phone].any? %>
+      <div style="color: red;">
+        <p>Phone <%= friend.errors[:phone][0] %></p>
+      </div>
+    <% end %>
+    </div>
+
+    <div>
+      <%= form.submit class:"btn btn-warning"%>
+    </div>
+  <% end %>
+</div>
